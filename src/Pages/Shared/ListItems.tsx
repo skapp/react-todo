@@ -1,14 +1,14 @@
-import React from 'react';
+import List from '@material-ui/core/List/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import { CheckBoxOutlined } from '@material-ui/icons';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import { CheckBoxOutlineBlankSharp, CheckBoxOutlined } from '@material-ui/icons';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SideBarMainItems = (
-    <div>
+const SideBarMainItems = () => (
+    <List>
         <ListItem component={Link} to="/dashboard">
             <ListItemIcon>
                 <DashboardIcon />
@@ -21,6 +21,6 @@ const SideBarMainItems = (
             </ListItemIcon>
             <ListItemText primary="ToDo" />
         </ListItem>
-    </div>
+    </List>
 );
 export default SideBarMainItems

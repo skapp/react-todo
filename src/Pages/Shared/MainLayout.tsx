@@ -1,20 +1,19 @@
-import { ReactChild, ReactNode, useState } from "react";
-import clsx from "clsx";
-import { makeStyles, Theme } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
-import MenuIcon from "@material-ui/icons/Menu";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import IconButton from "@material-ui/core/IconButton";
+import { makeStyles, Theme } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import MenuIcon from "@material-ui/icons/Menu";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import clsx from "clsx";
+import { ReactChild, useState } from "react";
 import Copyright from "../../Components/Common/Copyright";
-import { List } from "@material-ui/core";
 import SideBarMainItems from "./ListItems";
 
 const drawerWidth = 240;
@@ -88,7 +87,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         paddingBottom: theme.spacing(4),
     },
     footer: {
-        width:"100%",
+        width: "100%",
         padding: theme.spacing(1, 1),
         marginTop: "auto",
         backgroundColor:
@@ -160,7 +159,7 @@ const MainLayout = (props: MainLayoutProp) => {
                     </IconButton>
                 </div>
                 <Divider />
-                <List>{SideBarMainItems}</List>
+                <SideBarMainItems />
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
