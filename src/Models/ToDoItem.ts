@@ -7,7 +7,7 @@ export default interface ToDoItem extends Base {
     priority: ToDoPriorities
 }
 
-enum ToDoPriorities {
+export enum ToDoPriorities {
     High,
     Medium,
     Low

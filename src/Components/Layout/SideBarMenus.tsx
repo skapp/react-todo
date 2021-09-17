@@ -4,10 +4,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { CheckBoxOutlined } from '@material-ui/icons';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SideBarMainItems = () => (
+const SideBarMenus = () => (
     <List>
         <ListItem component={Link} to="/dashboard">
             <ListItemIcon>
@@ -23,4 +22,4 @@ const SideBarMainItems = () => (
         </ListItem>
     </List>
 );
-export default SideBarMainItems
+export default SideBarMenus

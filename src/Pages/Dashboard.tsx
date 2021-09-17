@@ -4,7 +4,7 @@ import MainLayout from "./Shared/MainLayout";
 
 const Dashboard = () => {
   return (
-    <MainLayout title="Dashboard">
+    <MainLayout>
       <Grid container spacing={3}>
         <Grid item xs={12} md={8} lg={9}></Grid>
         {/* Recent Deposits */}

@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { MouseEventHandler, useState } from "react";
 
 export interface HeaderProp {
-    title: string;
     openDrawer: boolean;
     handleDrawerOpen: MouseEventHandler<HTMLButtonElement> | undefined;
 };
@@ -87,7 +86,7 @@ const Header = (props: HeaderProp) => {
                 noWrap
                 className={classes.title}
             >
-                {props.title}
+                My App
             </Typography>
             <div>
                 <IconButton

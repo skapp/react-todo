@@ -8,7 +8,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import clsx from "clsx";
 import { ReactChild, useState } from "react";
 import Header from '../../Components/Layout/Header';
-import SideBarMainItems from "./ListItems";
+import SideBarMenus from "../../Components/Layout/SideBarMenus";
 
 const drawerWidth = 240;
 
@@ -67,7 +67,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }));
 export interface MainLayoutProp {
-    title: string;
     children: ReactChild | ReactChild[];
 }
 
@@ -83,7 +82,7 @@ const MainLayout = (props: MainLayoutProp) => {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <Header openDrawer={open} handleDrawerOpen={handleDrawerOpen} title={props.title} />
+            <Header openDrawer={open} handleDrawerOpen={handleDrawerOpen} />
             <Drawer
                 variant="permanent"
                 classes={{
@@ -97,7 +96,7 @@ const MainLayout = (props: MainLayoutProp) => {
                     </IconButton>
                 </div>
                 <Divider />
-                <SideBarMainItems />
+                <SideBarMenus />
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
